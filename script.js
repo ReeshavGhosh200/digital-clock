@@ -6,36 +6,28 @@ const cusBut = document.getElementById("cus");
 const customize = document.getElementById("customize");
 const backOptions = document.getElementById("back_op");
 
-//clock
+//clock + time zone
 function update() {
     const curTime = new Date();
 
-    let hours = curTime.getHours();
-    let minutes = curTime.getMinutes();
-    let seconds = curTime.getSeconds();
+    const selectedTimeZone = document.getElementById("timezone").value;
+    const options = { timeZone: selectedTimeZone };
+
+    const timeZoneTime = new Date(curTime.toLocaleString('en-US', options));
+
+    let hours = timeZoneTime.getHours();
+    let minutes = timeZoneTime.getMinutes();
+    let seconds = timeZoneTime.getSeconds();
     let metric = '';
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
     const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
-    let year = curTime.getFullYear();
-    let month = months[curTime.getMonth()];
-    let day = days[curTime.getDay()];
-    let date = curTime.getDate();
+    let year = timeZoneTime.getFullYear();
+    let month = months[timeZoneTime.getMonth()];
+    let day = days[timeZoneTime.getDay()];
+    let date = timeZoneTime.getDate();
 
-    // Get the selected time zone
-    const selectedTimeZone = document.getElementById("timezone").value;
-    const options = { timeZone: selectedTimeZone };
-
-    // Convert the current time to the selected time zone
-    const timeZoneTime = new Date(curTime.toLocaleString('en-US', options));
-
-    // Extract hours, minutes, and seconds from the converted time
-    hours = timeZoneTime.getHours();
-    minutes = timeZoneTime.getMinutes();
-    seconds = timeZoneTime.getSeconds();
-
-    // Format hours for 12-hour or 24-hour based on user selection
     if (document.getElementById("24").checked) {
         metric = ''; // No metric for 24-hour format
     } else {
@@ -50,16 +42,13 @@ function update() {
         }
     }
 
-    // Format minutes and seconds with leading zeros
     minutes = formatZeros(minutes);
     seconds = formatZeros(seconds);
     hours = formatZeros(hours)
 
-    // Update clock display
     timer.innerHTML = `${hours}:${minutes}:${seconds} ${metric}`;
     info.innerHTML = `${month} ${date} ${year}, ${day}`;
 
-    // Format hours to 24-hour format
     function formatZeros(timeGiven) {
         if (timeGiven < 10) {
             return "0" + timeGiven;
@@ -68,17 +57,34 @@ function update() {
     }
 }
 
+//time zone population
+function populateTimezones() {
+    const select = document.getElementById("timezone");
+    const timezones = moment.tz.names(); // Get all timezones using moment-timezone
+    const sortedTimezones = timezones.sort();
+    
+    sortedTimezones.forEach(timezone => {
+        const option = document.createElement("option");
+        option.value = timezone;
+        option.textContent = timezone;
+        select.appendChild(option);
+    });
+}
+
+window.onload = populateTimezones;
+
+// Call the function to populate timezones when the page loads
+window.onload = populateTimezones;
 
 //customization
+update();
+setInterval(update, 1000);
 
 //format
 const radioButtons = document.querySelectorAll('input[name="timeF"]');
 radioButtons.forEach(button => {
     button.addEventListener('change', update);
 });
-
-update();
-setInterval(update, 1000);
 
 
 //timer font
