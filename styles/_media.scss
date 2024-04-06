@@ -1,0 +1,25 @@
+
+@media (max-width: 550px){
+    #con #timer{
+        font-size: 3.5em;
+    }
+}
+@media (max-width: 400px){
+    #con #timer{
+        font-size: 2.5em;
+    }
+}
+
+@media(max-width:465px){
+    #customize .f{
+        font-size: 20px;
+        width: 100px;
+    }
+}
+@media(max-width:373px){
+    body{font-size: 15px;}
+    #customize .f{
+        font-size: 15px;
+        width: 80px;
+    }
+}

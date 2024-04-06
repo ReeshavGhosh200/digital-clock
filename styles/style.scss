@@ -1,0 +1,59 @@
+@import 'fonts';
+@import 'main';
+@import 'free';
+
+button{
+    cursor: pointer;
+    border: none;
+    padding: 5px;
+    background-color: aquamarine;
+    margin: 5px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+.hide{
+    display: none;
+}
+.copy{
+    background-color: yellow;
+    font-size: 10px;
+    font-family: arial;
+    padding: 4px;
+}
+*{
+    font-family: font7;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+}
+.animation_back{
+    animation: backColorChange  7s ease-in-out infinite;
+}
+.animation_col{
+    animation: colorChange  7s ease-in-out infinite;
+}
+@keyframes colorChange {
+    0%{color: red}
+    20%{color: orange}
+    40%{color: yellow}
+    50%{color: lime}
+    60%{color: dodgerblue}
+    80%{color: rgb(51, 39, 228)}
+    100%{color: rgb(104, 9, 104)}
+}
+@keyframes backColorChange {
+    0%{background-color: red}
+    20%{background-color: orange}
+    40%{background-color: yellow}
+    50%{background-color: lime}
+    60%{background-color: dodgerblue}
+    80%{background-color: rgb(51, 39, 228)}
+    100%{background-color: rgb(104, 9, 104)}
+}
+
+@import 'media';

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+   <div id="con">
+        <div id="timer">00:00:00</div>
+        <div id="info"></div>
+        <button id="cus">Customize clock &rightarrow;</button>
+    </div>
+    
+    
+    <div id="customize">
+        <div class="font">
+            <h2>Customize fonts</h2>
+            <button style="font-family: font1;" class="f">Font1</button> <br>
+            <button style="font-family: font2;" class="f">Font2</button>
+            <button style="font-family: font2_2;" class="f">Font2.2</button>
+            <button style="font-family: font2_3;" class="f">Font2.3</button> <br>
+            <button style="font-family: font3;" class="f">Font3</button>
+            <button style="font-family: font4;" class="f">Font4</button>
+            <button style="font-family: font5;" class="f">Font5</button> <br>
+            <button style="font-family: font6;" class="f">Font6</button>
+            <button style="font-family: font7;" class="f">Font7</button> 
+            <button style="font-family: font8;" class="f">Font8</button> <br>
+            <button style="font-family: font1_2;" class="f">Font9</button>
+            <button style="font-family: font1_3;" class="f">Font9.2</button>  <br>
+            <button style="font-family: font1_4;" class="f">Font10</button>
+            <button style="font-family: arial;" class="f">Font11</button>
+            <button style="font-family: consolas;" class="f">Font12</button>
+        </div>
+
+        <!--  -->
+
+        <div class="size">
+            <h2>Font Size</h2>
+            <input type="range" name="range1" id="size">
+        </div>
+
+        <!--  -->
+
+        <div class="theme">
+            <h2>Colour Theme Picker</h2>
+            <p>Pick a color as a theme to apply the color to all clock elements</p>
+            <button id="red" class="z" style="background-color: red;">Red</button>
+            <button id="orange" class="z" style="background-color: maroon;">Maroon</button>
+            <button id="yellow" class="z" style="background-color: yellow;">Yellow</button>
+            <button id="fuchsia" class="z" style="background-color: Fuchsia;">Fuchsia</button>
+            <button id="blue" class="z" style="background-color: blue;">Blue</button>
+            <button id="lime" class="z" style="background-color: lime;">Lime</button>
+            <button id="aqua" class="z" style="background-color: aquamarine;">Aqua</button>
+        </div>
+        <p>To change color of a specific part, use the options below</p>
+
+        <!--  -->
+
+        <div class="back">
+          <h2>Customize Background</h2>
+          <select id="back_op">
+              <option value="def">Select</option>
+              <option value="sc">Solid Colour</option>
+              <option value="lg">Linear Gradient</option>
+              <option value="rg">Radial Gradient</option>
+              <option value="rain">Rainbow</option>
+          </select>
+          <div id="sc" class="hide">
+              <h2>Solid Colour</h2>
+              <label for="1">Select Colour</label>
+              <input type="color" name="1" id="col"> <br>
+              <button id="apply">Apply Colour</button>
+          </div>
+          <div id="lg" class="hide">
+              <h2>Linear Gradient</h2>
+              <label for="2">Select Colour 1</label>
+              <input type="color" name="2" id="l_col_1"> <br>
+              <label for="3">Select Colour 2</label>
+              <input type="color" name="3" id="l_col_2"> <br>
+              <label for="4">Select Rotation: </label>
+              <input type="number" name="4" id="l_rot" value="0">degrees <br>
+              <button id="apply2">Apply Gradient</button>
+          </div>
+          <div id="rg" class="hide">
+              <h2>Radial Gradient</h2>
+              <label for="5">Select Colour 1</label>
+              <input type="color" name="5" id="r_col_1"> <br>
+              <label for="6">Select Colour 2</label>
+              <input type="color" name="6" id="r_col_2"> <br>
+              <label for="7">Select Colour 1 percentage: </label>
+              <input type="number" name="7" id="r_per" value="25">% <br>
+              <button id="apply3">Apply Gradient</button>
+          </div>
+        </div>
+
+        <!--  -->
+
+        <div class="back2">
+            <h2>Background Image</h2>
+            <p>If you are not satisfied with colours, upload your image here</p>
+            <label for="file" class="file">Upload File</label>
+            <input type="file" id="file"> <br>
+            <p id="baje"></p>
+        </div>
+
+        <!--  -->
+
+        <h2>Text Shadow</h2>
+        <label for="off_x">Select Offset X</label>
+        <input type="text" id="off_x" value="5">px <br>
+        <label for="off_y">Select Offset Y</label>
+        <input type="text" id="off_y" value="5">px <br>
+        <label for="off_col">Select Color</label>
+        <input type="color" id="off_col"><br>
+        <button id="apply7">Apply shadow</button> 
+        <button id="apply8">Remove shadow</button>
+
+        <!--  -->
+
+        <div id="col">
+            <h2>Customize Colours</h2>
+            <label for="c_c">Select Clock Colour: </label>
+            <input type="color" name="8" id="c_c"> <br>
+            <label for="info_c">Select Date Colour: </label>
+            <input type="color" name="9" id="info_c"> <br>
+            <button id="apply4">Apply Colors</button> <br> <br>
+
+            <label for="rain">Rainbow: </label>
+            <input type="checkbox" name="a" id="rain">
+        </div> 
+
+        <!--  -->
+
+        <div class="format">
+            <h2>Time Format</h2>
+            12 hour Format: <input type="radio" name="timeF" id="12" checked class="ddd"> <br>
+            24 hour Format: <input type="radio" name="timeF" id="24" class="ddd"> <br>
+        </div> <br><br>
+
+        <!--  -->
+
+        <h2>Clock alignment</h2>
+        <label for="left">Left</label>
+        <input type="radio" name="choice1" id="left"> <br>
+        <label for="center">Center</label>
+        <input type="radio" name="choice1" id="center" checked> <br>
+        <label for="right">Right</label>
+        <input type="radio" name="choice1" id="right"> <br> <br>
+
+        <label for="top">Top</label>
+        <input type="radio" name="top" id="top"> <br>
+        <label for="center2">Center</label>
+        <input type="radio" name="top" id="center2" checked> <br>
+        <label for="bottom">Bottom</label>
+        <input type="radio" name="top" id="bottom"> <br>
+
+        <!--  -->
+        
+        <h2>Select Time Zone</h2>
+        <select id="timezone">
+            <option value="Asia/Kolkata">India (Kolkata)</option>
+            <option value="America/Los_Angeles">Los Angeles</option>
+            <option value="Europe/London">London</option>
+            <option value="Europe/Paris">Paris</option>
+            <option value="America/Sao_Paulo">Brazil</option>
+            <option value="Europe/Berlin">Germany</option>
+            <option value="America/Chicago">Texas (Chicago)</option>
+            <option value="America/New_York">United States (Eastern Time Zone)</option>
+            <option value="America/Los_Angeles">United States (Pacific Time Zone)</option>
+            <option value="Europe/London">United Kingdom</option>
+            <option value="Asia/Tokyo">Japan</option>
+            <option value="Australia/Sydney">Australia/Sydney</option>
+            <option value="Asia/Shanghai">China</option>
+            <option value="America/Toronto">Canada (Eastern Time Zone)</option>
+          </select>
+
+        <!--  -->
+
+        <br><br>
+        <button class="reset">Reset Clock</button>
+        <br><br>
+
+        <!--  -->
+
+        <hr>
+
+        <div class="final">
+            <h2>Done?</h2>
+            <p>If you are done with editing your digital clock, click the following button</p>
+            <button id="showcase">Showcase</button>
+        </div>
+    </div>
+
+    <div class="copy">
+        <p>Original Creator: Reeshav Ghosh</p>
+    </div>
+    <!-- 
+        //fonts
+        //background
+        //colors
+        //animation effects
+        //time zone implementation
+        //text alignment
+        //text shadow
+        //background image
+        //time format
+        //theme colour picker
+     -->
+    <script src="./script.js"></script>
+</body>
+</html>
