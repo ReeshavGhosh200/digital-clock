@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Clock</title>
     <link rel="stylesheet" href="./styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
 </head>
 <body>
-   <div id="con">
+    <div id="con">
         <div id="timer">00:00:00</div>
         <div id="info"></div>
         <button id="cus">Customize clock &rightarrow;</button>
@@ -161,20 +163,7 @@
         <h2>Select Time Zone</h2>
         <select id="timezone">
             <option value="Asia/Kolkata">India (Kolkata)</option>
-            <option value="America/Los_Angeles">Los Angeles</option>
-            <option value="Europe/London">London</option>
-            <option value="Europe/Paris">Paris</option>
-            <option value="America/Sao_Paulo">Brazil</option>
-            <option value="Europe/Berlin">Germany</option>
-            <option value="America/Chicago">Texas (Chicago)</option>
-            <option value="America/New_York">United States (Eastern Time Zone)</option>
-            <option value="America/Los_Angeles">United States (Pacific Time Zone)</option>
-            <option value="Europe/London">United Kingdom</option>
-            <option value="Asia/Tokyo">Japan</option>
-            <option value="Australia/Sydney">Australia/Sydney</option>
-            <option value="Asia/Shanghai">China</option>
-            <option value="America/Toronto">Canada (Eastern Time Zone)</option>
-          </select>
+        </select>
 
         <!--  -->
 
