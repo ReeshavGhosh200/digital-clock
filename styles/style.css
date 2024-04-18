@@ -54,6 +54,42 @@
   font-family: font8;
   src: url(./../Fonts/Open\ 24\ Display\ St.ttf);
 }
+@font-face {
+  font-family: font9;
+  src: url(./../Fonts/new/ARCADE_I.TTF);
+}
+@font-face {
+  font-family: font9_2;
+  src: url(./../Fonts/new/ARCADE_N.TTF);
+}
+@font-face {
+  font-family: font9_3;
+  src: url(./../Fonts/new/ARCADE_R.TTF);
+}
+@font-face {
+  font-family: font10;
+  src: url(./../Fonts/new/Dune_Rise.ttf);
+}
+@font-face {
+  font-family: font11;
+  src: url(./../Fonts/new/CakeZombie.ttf);
+}
+@font-face {
+  font-family: font12;
+  src: url(./../Fonts/new/MINECRAFT\ PE.ttf);
+}
+@font-face {
+  font-family: font12_2;
+  src: url(./../Fonts/new/MinecrafterReg.ttf);
+}
+@font-face {
+  font-family: font14;
+  src: url(./../Fonts/new//SpeedBeast\ FREE.ttf);
+}
+@font-face {
+  font-family: font15;
+  src: url(./../Fonts/new/The\ Led\ Display\ St.ttf);
+}
 html {
   scroll-behavior: smooth;
 }
@@ -126,7 +162,7 @@ html {
   border: none;
   background-color: dodgerblue;
   border-radius: 10px;
-  width: 130px;
+  width: 200px;
 }
 #customize .f:nth-child(odd) {
   background-color: skyblue;
