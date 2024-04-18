@@ -103,6 +103,14 @@ fontButtons[11].addEventListener("click", () => timer.style.fontFamily = "font1_
 fontButtons[12].addEventListener("click", () => timer.style.fontFamily = "font1_4");
 fontButtons[13].addEventListener("click", () => timer.style.fontFamily = "arial");
 fontButtons[14].addEventListener("click", () => timer.style.fontFamily = "consolas");
+fontButtons[15].addEventListener("click", () => timer.style.fontFamily = "font10");
+fontButtons[16].addEventListener("click", () => timer.style.fontFamily = "font9");
+fontButtons[17].addEventListener("click", () => timer.style.fontFamily = "font9_2");
+fontButtons[18].addEventListener("click", () => timer.style.fontFamily = "font11");
+fontButtons[19].addEventListener("click", () => timer.style.fontFamily = "font12");
+fontButtons[20].addEventListener("click", () => timer.style.fontFamily = "font12_2");
+fontButtons[21].addEventListener("click", () => timer.style.fontFamily = "font14");
+fontButtons[22].addEventListener("click", () => timer.style.fontFamily = "font15");
 
 // info font
 fontButtons[0].addEventListener("click", () => info.style.fontFamily = "font1");
@@ -120,6 +128,14 @@ fontButtons[11].addEventListener("click", () => info.style.fontFamily = "font1_3
 fontButtons[12].addEventListener("click", () => info.style.fontFamily = "font1_4");
 fontButtons[13].addEventListener("click", () => info.style.fontFamily = "arial");
 fontButtons[14].addEventListener("click", () => info.style.fontFamily = "consolas");
+fontButtons[15].addEventListener("click", () => info.style.fontFamily = "font10");
+fontButtons[16].addEventListener("click", () => info.style.fontFamily = "font9");
+fontButtons[17].addEventListener("click", () => info.style.fontFamily = "font9_2");
+fontButtons[18].addEventListener("click", () => info.style.fontFamily = "font11");
+fontButtons[19].addEventListener("click", () => info.style.fontFamily = "font12");
+fontButtons[20].addEventListener("click", () => info.style.fontFamily = "font12_2");
+fontButtons[21].addEventListener("click", () => info.style.fontFamily = "font14");
+fontButtons[22].addEventListener("click", () => info.style.fontFamily = "font15");
 
 // customize button
 let on = false;
@@ -147,27 +163,39 @@ backOptions.addEventListener("change", e => {
         document.getElementById("sc").style.display = "block";
         document.getElementById("lg").style.display = "none";
         document.getElementById("rg").style.display = "none";
+        document.getElementById("back2").style.display = "none";
         container.classList.remove("animation_back");
     } else if(selected === "lg"){
         document.getElementById("sc").style.display = "none";
         document.getElementById("lg").style.display = "block";
         document.getElementById("rg").style.display = "none";
+        document.getElementById("back2").style.display = "none";
         container.classList.remove("animation_back");
     }  else if(selected === "rg"){
         document.getElementById("sc").style.display = "none";
         document.getElementById("lg").style.display = "none";
         document.getElementById("rg").style.display = "block";
+        document.getElementById("back2").style.display = "none";
         container.classList.remove("animation_back");
     } else if(selected === "def"){
         document.getElementById("sc").style.display = "none";
         document.getElementById("lg").style.display = "none";
         document.getElementById("rg").style.display = "none";
+        document.getElementById("back2").style.display = "none";
         container.classList.remove("animation_back");
     } else if(selected === "rain"){
         document.getElementById("sc").style.display = "none";
         document.getElementById("lg").style.display = "none";
         document.getElementById("rg").style.display = "none";
+        document.getElementById("back2").style.display = "none";
         container.classList.add("animation_back");
+    } else if(selected === "img"){
+        document.getElementById("sc").style.display = "none";
+        document.getElementById("lg").style.display = "none";
+        document.getElementById("rg").style.display = "none";
+        document.getElementById("back2").style.display = "block";
+        container.classList.remove("animation_back");
+
     }
 });
 
