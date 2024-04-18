@@ -1,59 +1,307 @@
-@import 'fonts';
-@import 'main';
-@import 'free';
+@font-face {
+  font-family: font1;
+  src: url(./../Fonts/3X5_____.TTF);
+}
+@font-face {
+  font-family: font1_2;
+  src: url(./../Fonts/chintzy.ttf);
+}
+@font-face {
+  font-family: font1_3;
+  src: url(./../Fonts/chintzys.ttf);
+}
+@font-face {
+  font-family: font1_4;
+  src: url(./../Fonts/computer_7.ttf);
+}
+@font-face {
+  font-family: font2;
+  src: url(./../Fonts/print_dashed_tt.ttf);
+}
+@font-face {
+  font-family: font2_2;
+  src: url(./../Fonts/print_clearly_tt.ttf);
+}
+@font-face {
+  font-family: font2_3;
+  src: url(./../Fonts/print_bold_tt.ttf);
+}
+@font-face {
+  font-family: font3;
+  src: url(./../Fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: font4;
+  src: url(./../Fonts/data-latin.ttf);
+}
+@font-face {
+  font-family: font5;
+  src: url(./../Fonts/GetboregSlab-Italic.ttf);
+}
+@font-face {
+  font-family: font7;
+  src: url(./../Fonts/GetboregSlab-Italic.ttf);
+}
+@font-face {
+  font-family: font6;
+  src: url(./../Fonts/MightySouly-lxggD.ttf);
+}
+@font-face {
+  font-family: font7;
+  src: url(./../Fonts/mineglyph-faithful.ttf);
+}
+@font-face {
+  font-family: font8;
+  src: url(./../Fonts/Open\ 24\ Display\ St.ttf);
+}
+@font-face {
+  font-family: font9;
+  src: url(./../Fonts/new/ARCADE_I.TTF);
+}
+@font-face {
+  font-family: font9_2;
+  src: url(./../Fonts/new/ARCADE_N.TTF);
+}
+@font-face {
+  font-family: font9_3;
+  src: url(./../Fonts/new/ARCADE_R.TTF);
+}
+@font-face {
+  font-family: font10;
+  src: url(./../Fonts/new/Dune_Rise.ttf);
+}
+@font-face {
+  font-family: font11;
+  src: url(./../Fonts/new/CakeZombie.ttf);
+}
+@font-face {
+  font-family: font12;
+  src: url(./../Fonts/new/MINECRAFT\ PE.ttf);
+}
+@font-face {
+  font-family: font12_2;
+  src: url(./../Fonts/new/MinecrafterReg.ttf);
+}
+@font-face {
+  font-family: font14;
+  src: url(./../Fonts/new//SpeedBeast\ FREE.ttf);
+}
+@font-face {
+  font-family: font15;
+  src: url(./../Fonts/new/The\ Led\ Display\ St.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
 
-button{
-    cursor: pointer;
-    border: none;
-    padding: 5px;
-    background-color: aquamarine;
-    margin: 5px;
-    border-radius: 5px;
+.cen {
+  text-align: center;
 }
-::-webkit-scrollbar{
-    display: none;
+
+.war {
+  padding: 5px;
+  background-color: rgb(179, 36, 36);
 }
-.hide{
-    display: none;
+
+.z {
+  width: 75px;
+  height: 30px;
+  border: 2px solid;
+  letter-spacing: 1.5px;
 }
-.copy{
-    background-color: yellow;
-    font-size: 10px;
-    font-family: arial;
-    padding: 4px;
+
+#con {
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-*{
-    font-family: font7;
-    box-sizing: border-box;
+#con #timer {
+  font-size: 4.5em;
+  font-family: arial;
+  transition: all 0.5s ease-in-out;
 }
-body{
-    scroll-behavior: smooth;
-    margin: 0;
-    padding: 0;
+#con #info {
+  transition: all 0.5s ease-in-out;
+  font-family: arial;
+  font-size: 20px;
 }
-.animation_back{
-    animation: backColorChange  7s ease-in-out infinite;
+#con #cus {
+  position: absolute;
+  bottom: 50px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  border-radius: 20px;
+  border: 5px solid rgb(37, 115, 194);
+  background-image: linear-gradient(90deg, blue, rgb(31, 141, 252));
+  font-size: 17px;
+  font-family: font7;
+  margin-left: auto;
+  margin-right: auto;
 }
-.animation_col{
-    animation: colorChange  7s ease-in-out infinite;
+
+#customize {
+  display: none;
 }
+#customize .f {
+  margin: 10px;
+  font-size: 30px;
+  padding: 5px;
+  letter-spacing: 3px;
+  cursor: pointer;
+  border: none;
+  background-color: dodgerblue;
+  border-radius: 10px;
+  width: 200px;
+}
+#customize .f:nth-child(odd) {
+  background-color: skyblue;
+}
+#customize #file {
+  display: none;
+}
+#customize .file {
+  display: block;
+  background-color: white;
+  text-align: center;
+  height: 75px;
+  font-size: 30px;
+  width: 250px;
+  line-height: 70px;
+  border: 5px dashed dodgerblue;
+  border-radius: 20px;
+  cursor: pointer;
+}
+#customize .reset {
+  font-size: 25px;
+  background-color: red;
+}
+
+input[type=file] {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  padding: 5px;
+  background-color: aquamarine;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.hide {
+  display: none;
+}
+
+.copy {
+  background-color: yellow;
+  font-size: 10px;
+  font-family: arial;
+  padding: 4px;
+}
+
+* {
+  font-family: font7;
+  box-sizing: border-box;
+}
+
+body {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+.animation_back {
+  animation: backColorChange 7s ease-in-out infinite;
+}
+
+.animation_col {
+  animation: colorChange 7s ease-in-out infinite;
+}
+
 @keyframes colorChange {
-    0%{color: red}
-    20%{color: orange}
-    40%{color: yellow}
-    50%{color: lime}
-    60%{color: dodgerblue}
-    80%{color: rgb(51, 39, 228)}
-    100%{color: rgb(104, 9, 104)}
+  0% {
+    color: red;
+  }
+  20% {
+    color: orange;
+  }
+  40% {
+    color: yellow;
+  }
+  50% {
+    color: lime;
+  }
+  60% {
+    color: dodgerblue;
+  }
+  80% {
+    color: rgb(51, 39, 228);
+  }
+  100% {
+    color: rgb(104, 9, 104);
+  }
 }
 @keyframes backColorChange {
-    0%{background-color: red}
-    20%{background-color: orange}
-    40%{background-color: yellow}
-    50%{background-color: lime}
-    60%{background-color: dodgerblue}
-    80%{background-color: rgb(51, 39, 228)}
-    100%{background-color: rgb(104, 9, 104)}
+  0% {
+    background-color: red;
+  }
+  20% {
+    background-color: orange;
+  }
+  40% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: lime;
+  }
+  60% {
+    background-color: dodgerblue;
+  }
+  80% {
+    background-color: rgb(51, 39, 228);
+  }
+  100% {
+    background-color: rgb(104, 9, 104);
+  }
 }
-
-@import 'media';
+@media (max-width: 550px) {
+  #con #timer {
+    font-size: 3.5em;
+  }
+}
+@media (max-width: 400px) {
+  #con #timer {
+    font-size: 2.5em;
+  }
+}
+@media (max-width: 465px) {
+  #customize .f {
+    font-size: 20px;
+    width: 100px;
+  }
+}
+@media (max-width: 373px) {
+  body {
+    font-size: 15px;
+  }
+  #customize .f {
+    font-size: 15px;
+    width: 80px;
+  }
+}/*# sourceMappingURL=style.css.map */
